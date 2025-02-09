@@ -3,33 +3,115 @@
 <head>
 <meta charset="UTF-8">
 <title>Sanzida Akter Mim</title>
+
+	<script>
+        	function scrollToSection(sectionId) {
+            		var element = document.getElementById(sectionId);
+		        if (element) {
+                		element.scrollIntoView({ behavior: 'smooth' });
+            		}
+        	}
+	</script>
+
 </head>
 <body>
 	<div>
-		<section>
-			<h3>Sanzida Akter Mim</h3>
-		        <button onclick='window.location.href="education.html"'>Education</button>
-		        <button onclick='window.location.href="experience.html"'>Experience</button>
-		        <button onclick='window.location.href="project.html"'>Projects</button>
-		        <button onclick='window.location.href="contact.html"'>Contact</button><hr><br>
-		</section>
+		<nav>
+	            <button onclick="scrollToSection('education')">Education</button>
+        	    <button onclick="scrollToSection('experience')">Experience</button>
+	            <button onclick="scrollToSection('projects')">Projects</button>
+        	    <button onclick="scrollToSection('contact_me')">Contact Me</button>
+	            <hr>
+        	</nav>
+    </div>
 
-		<section>
-			<p>Hi There! I'm</p><br>
-			<h2>Sanzida Akter Mim</h2><br>
-			<h4>Frontend Developer</h4><br>
-			<h4>E-commerce Project Manager</h4><br>
-			<h4>Content Writer</h4><br>
-		</section>
+    <section id="about_me">
+        <br><br><br>
+        <h1 text-align="center">Hello, Welcome To My Portfolio!</h1><br>
+        <h3 text-align="center">Please review the Education, Experience & Projects sections as well!</h3>
+        <br><br><br>
+        <hr>
+    </section>
+    
+    <section id="education">
+        <div>
+            <br><br><br>
+            <blockquote cite="https://www.positivityblog.com/quotes-on-education/">“The difference between school and life? In school, you're taught a lesson and then given a test. In life, you're given a test that teaches you a lesson.”<cite> - Tom Bodett</cite>
+            </blockquote><br>
+        </div>
+        
+        <ul>
+            <li>BSC</li>
+                <ul>
+                    <li>Institute of Science & Technology</li>
+                    <li>Major: Electronics & Communication Engineering (ECE)</li>
+                    <li>Session: 2021-2022;</li>
+                </ul>
+            <li>HSC</li>
+                <ul>
+                    <li>Central Women's College</li>
+                    <li>Department: Science</li>
+                    <li>Passing Year: 2021</li>
+                    <li>GPA: 4.22</li>
+                </ul>
+            <li>SSC</li>
+                <ul>
+                    <li>Motijheel Model High School & College</li>
+                    <li>Department: Science</li>
+                    <li>Passing Year: 2019</li>
+                    <li>GPA: 4.33</li>
+                </ul>
+        </ul>
+        <br><br><br>
+        <hr>
+    </section>
 
-		<section>
-			<a href="https://github.com/sanzida-mim" target="main">
-				<img src="Images/github.png" alt="GitHub" height="30px">
-			</a>
-			<a href="https://www.linkedin.com/in/sanzida-akter-b7b583233/", target="main">
-		                <img src="Images/linkedin.png" alt="LinkedIn" height="30px">
-		        </a>
-		</section>
-	</div>
+    <section id="experience">
+        <div>
+            <br><br><br>
+            <p>&#9830;	E-Commerce Project Manager</p>
+                <p>&nbsp; &nbsp; &nbsp; 3ingenious &#183; Part-time</p>
+                <p>&nbsp; &nbsp; &nbsp; November 2022 - Present</p>
+            	<p>&nbsp; &nbsp; &nbsp; United States &#183; Remote</p>
+            <p>&#9830;  Content Writer</p>
+                <p>&nbsp; &nbsp; &nbsp; Ghostwriter &#183; Project-based</p>
+                <p>&nbsp; &nbsp; &nbsp; January 2024 - January 2025</p>
+                <p>&nbsp; &nbsp; &nbsp; Remote</p>
+            <p>&#9830;	Data Analyst</p>
+                <p>&nbsp; &nbsp; &nbsp; Remote Job Bd &#183; Internship</p>
+                <p>&nbsp; &nbsp; &nbsp; November 2023 - February 2024</p>
+                <p>&nbsp; &nbsp; &nbsp; Bangladesh &#183; Remote</p>
+            <p>&#9830;	Assistant Mentor</p>
+                <p>&nbsp; &nbsp; &nbsp; Technovation &#183; Seasonal</p>
+                <p>&nbsp; &nbsp; &nbsp; 2021 &#38; 2022</p>
+                <p>&nbsp; &nbsp; &nbsp; Bangladesh &#183; Remote</p>
+        </div>
+        <br><br><br>
+        <hr>
+    </section>
+
+    <section id="projects">
+        <br><br><br>
+        <h3>Project Lists!</h3>
+        <br><br><br>
+        <hr>
+    </section>
+
+    <section id="contact_me">
+        <br><br><br>
+        <pre>
+            <a href="https://github.com/sanzida-mim" target="main"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                alt="GitHub"
+                height="50"
+                ></a>          <a href="https://www.linkedin.com/in/sanzida-akter-b7b583233/" target="main"><img src="https://i.pinimg.com/736x/b2/f8/28/b2f828513f21444829a619ce563d4d4e.jpg"
+                alt="Linkedin"
+                height="50"
+                ></a>          <a href="https://sanzidamim.me/" target="main"><img src="https://static.vecteezy.com/system/resources/thumbnails/006/414/204/small/internet-web-icon-in-trendy-flat-style-isolated-on-white-background-website-symbol-for-your-website-design-logo-app-ui-illustration-free-vector.jpg"
+                alt="personal-portfolio-website"
+                height="70">
+            </a>
+        </pre>
+        <br><br><br>
+    </section>
 </body>
 </html>
