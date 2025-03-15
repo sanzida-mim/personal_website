@@ -1,13 +1,22 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .wrapper {
-    background: linear-gradient(135deg, rgb(20, 61, 96), rgb(78, 8, 95));
-    color: #ffffff;
+    background: #0c141a;
+    color: white;
     font-family: 'Space Grotesk', sans-serif;
-    padding: 1em;
+}
+
+.logo {
+    display: inline-block;
+    padding: 0.25em;
+    flex-grow: 1;
+    font-size: 30px;
 }
 
 .nav-bar {
@@ -16,7 +25,13 @@ body {
     justify-content: flex-end;
 }
 
-button {
+.btns {
+    display: flex;
+    gap: 2em;
+    padding: 0.25em;
+}
+
+.btn {
     background: transparent;
     color: white;
     font-family: 'Space Grotesk';
@@ -25,17 +40,7 @@ button {
     position: relative;
 }
 
-button:focus,
-button:hover::after,
-button:hover {
-    outline: 0;
-    cursor: pointer;
-    color: gold;
-    transform: scale(1, 1);
-    transition: transform 0.2s linear;
-}
-
-button::after {
+.btn::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -46,8 +51,36 @@ button::after {
     transform: scale(0, 1);
 }
 
+.btn:focus,
+.btn:hover::after,
+.btn:hover {
+    outline: 0;
+    cursor: pointer;
+    color: gold;
+    transform: scale(1, 1);
+    transition: transform 0.4s ease;
+}
+
 section {
-    margin: 0.5em;
+    width: 100%;
     padding: 1em;
-    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+#go-up-btn {
+    background-color: goldenrod;
+    border-radius: 50%;
+    color: rgb(78, 8, 95);
+    outline: 0;
+    cursor: pointer;
+    padding: 0.5em;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+}
+
+span {
+    font-size: 25px;
 }

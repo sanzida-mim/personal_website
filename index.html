@@ -11,14 +11,16 @@
 
     <body>
         <div class="wrapper">
-            <div class="nav-bar" id="nav-bar">
-                <nav>
-                    <button onclick="scrollToSection('education')">Education</button>
-                    <button onclick="scrollToSection('experience')">Experience</button>
-                    <button onclick="scrollToSection('projects')">Projects</button>
-                    <button onclick="scrollToSection('contact_me')">Contact Me</button>
+            <section class="nav-bar" id="nav-bar">
+                <div class="logo">SAM</div>
+
+                <nav class="btns">
+                    <button class="btn" onclick="scrollToSection('education')">Education</button>
+                    <button class="btn" onclick="scrollToSection('experience')">Experience</button>
+                    <button class="btn" onclick="scrollToSection('projects')">Projects</button>
+                    <button class="btn" onclick="scrollToSection('contact_me')">Contact Me</button>
                 </nav>
-            </div>
+            </section>
     
             <section id="about_me">
                 <h1 text-align="center">Hello, Welcome To My Portfolio!</h1><br>
@@ -81,22 +83,26 @@
     
             <section id="projects">
                 <h3>Project Lists!</h3>
+                <ul>
+                    <li>To-Do List</li>
+                </ul>
                 <hr>
             </section>
     
             <section id="contact_me">
                 <pre>
                     <a href="https://github.com/sanzida-mim" target="main"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                        alt="GitHub"
-                        height="50"
-                        ></a>          <a href="https://www.linkedin.com/in/sanzida-akter-b7b583233/" target="main"><img src="https://i.pinimg.com/736x/b2/f8/28/b2f828513f21444829a619ce563d4d4e.jpg"
-                        alt="Linkedin"
-                        height="50"
-                        ></a>          <a href="https://sanzidamim.me/" target="main"><img src="https://static.vecteezy.com/system/resources/thumbnails/006/414/204/small/internet-web-icon-in-trendy-flat-style-isolated-on-white-background-website-symbol-for-your-website-design-logo-app-ui-illustration-free-vector.jpg"
-                        alt="personal-portfolio-website"
-                        height="70">
-                    </a>
+                    alt="GitHub"
+                    height="50"
+                    ></a>          <a href="https://www.linkedin.com/in/sanzida-akter-b7b583233/" target="main"><img src="https://i.pinimg.com/736x/b2/f8/28/b2f828513f21444829a619ce563d4d4e.jpg"
+                    alt="Linkedin"
+                    height="50"
+                    ></a>
                 </pre>
+
+                <button id="go-up-btn" onclick="scrollToSection('nav-bar')">
+                    <span>&#11165;</span>
+                </button>
             </section>
         </div>
 
