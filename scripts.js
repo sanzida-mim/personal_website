@@ -4,3 +4,5 @@ function scrollToSection(sectionId) {
         element.scrollIntoView({ behavior: 'smooth' });
     }
 }
+
+import * as THREE from 'three';
