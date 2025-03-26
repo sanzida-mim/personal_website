@@ -25,7 +25,7 @@
             <section id="about_me">
                 <h1 text-align="center">Hello, Welcome To My Portfolio!</h1><br>
                 <h3 text-align="center">Please review the Education, Experience & Projects sections as well!</h3>
-                <hr>
+
             </section>
             
             <section class="section" id="education">
@@ -58,7 +58,7 @@
                             </ul>
                     </ul>
                 </div>
-                <hr>
+
             </section>
     
             <section class="section" id="experience">
@@ -90,14 +90,16 @@
                             </ul>
                     </ul>
                 </div>
-                <hr>
             </section>
     
             <section class="section" id="projects">
                 <h3>Project Lists!</h3>
                 <ul>
                     <li>
-                        <a id="prj-1" href="https://sanzida-mim.github.io/to-do-list/" target="main">To-Do List</a>
+                        <a class="project" id="prj-1" href="https://sanzida-mim.github.io/to-do-list/" target="main">To-Do List</a>
+                    </li class="project">
+                    <li>
+                        <a class="project" id="prj-2" href="https://sanzida-mim.github.io/weather-app/" target="main">Weather App</a>
                     </li>
             </section>
     
@@ -111,13 +113,11 @@
                     height="50"
                     ></a>
                 </pre>
-                <div class="btn-up">
-                    <span class="go-up-span">Back To Top</span>
-                    <button id="go-up-btn" onclick="scrollToSection('nav-bar')">
-                        &#10095;
-                    </button>
-                </div>
             </section>
+
+            <div class="home">
+                <button class="go-up-btn" onclick="scrollToSection('nav-bar')">Back To Top <span>&#10095;</span></button>
+            </div>
         </div>
 
         <script src="/scripts.js"></script>

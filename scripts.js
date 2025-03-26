@@ -1,8 +1,12 @@
-function scrollToSection(sectionId) {
-    var element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-    }
-}
+const buttons = document.querySelectorAll('button');
 
-import * as THREE from 'three';
+buttons.forEach((button) => {
+    button.addEventListener('click', function () {
+        const sectionId = this.getAttribute('onclick').match(/'(.*?)'/)[1];
+        const element = document.getElementById(sectionId);
+
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
