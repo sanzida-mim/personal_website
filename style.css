@@ -130,7 +130,7 @@ body {
     border-color: transparent;
     color: #f0f8ff;
     position: fixed;
-    right: 10px;
+    right: -70px;
     transform: rotate(-90deg);
     margin: 0.5em;
     display: flex;
