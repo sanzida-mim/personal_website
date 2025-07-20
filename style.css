@@ -20,7 +20,7 @@ body {
 
 .card {
     position: relative;
-    height: 90vh;
+    height: 30em;
     width: 99%;
     overflow: hidden;
     border-radius: 10px;
@@ -113,6 +113,11 @@ body {
 .section {
     padding: 1em;
     /* margin: 10px; */
+}
+
+#education #experience {
+    font-size: 30px;
+    padding: 1rem;
 }
 
 .home {
