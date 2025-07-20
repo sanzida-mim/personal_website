@@ -8,39 +8,83 @@ body {
     height: 100%;
     width: 100%;
     overflow-x: hidden;
+    font-size: 40px;
 }
 
 .wrapper {
     background: #0c141a;
-    color: white;
+    /* color: white; */
     font-family: 'Space Grotesk', sans-serif;
     padding: 1em;
 }
 
-.logo {
-    display: inline-block;
-    padding: 0.25em;
-    flex-grow: 1;
-    font-size: 30px;
+.card {
+    position: relative;
+    height: 90vh;
+    width: 99%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 12px rgb(83, 117, 33);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    /* z-index: 0; */
+}
+
+.card-overlay {
+  position: relative;
+  z-index: 1;
+  padding: 1rem;
+  color: white;
+  /* text-align: center; */
 }
 
 .nav-bar {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px #b1f807;
 }
 
 .btns {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     padding: 0.25em;
+    height: 10vh;
 }
 
 .btn {
     background: transparent;
     color: white;
     font-family: 'Space Grotesk';
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
     border-width: inherit;
     position: relative;
 }
@@ -50,10 +94,10 @@ body {
     position: absolute;
     width: 100%;
     height: 0.1em;
-    background-color: #f0f;
+    background-color: #b1f807;
     left: 0;
     bottom: 0;
-    transform: scale(0, 1);
+    transform: scale(0, 2);
 }
 
 .btn:focus,
@@ -61,15 +105,14 @@ body {
 .btn:hover {
     outline: 0;
     cursor: pointer;
-    color: #f0f;
+    color: #b1f807;
     transform: scale(1, 1);
     transition: transform 0.4s ease;
 }
 
 .section {
     padding: 1em;
-    margin: 10px;
-
+    /* margin: 10px; */
 }
 
 .home {
@@ -82,15 +125,17 @@ body {
     border-color: transparent;
     color: #f0f8ff;
     position: fixed;
-    right: 1px;
+    right: 10px;
     transform: rotate(-90deg);
     margin: 0.5em;
     display: flex;
-    width: 120px;
+    width: 170px;
     box-sizing: border-box;
+    font-weight: bold;
     gap: 8px;
     transition: opacity 0.5s ease, gap 0.3s ease;
     opacity: 40%;
+    font-size: 20px;
 }
 
 .go-up-btn:hover {
@@ -107,12 +152,39 @@ body {
     align-items: center;
     outline: none;
     border-radius: 10px;
+    font-weight: bold;
     margin: 0.5em 0;
     padding: 1em;
     text-decoration: none;
 }
 
 .project:hover {
-    background-color: #f0f;
+    color: #2f2f2f;
+    background-color: #b1f807;
     transition: background-color 0.5s ease;
+}
+
+#contact_me {
+    color: white;
+    font-size: 30px;
+    background-color: #1d1a1d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.contact-icon {
+    box-sizing: border-box;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon img {
+    height: 80px;
+    width: auto;
 }
