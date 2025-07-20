@@ -51,7 +51,7 @@ body {
 .card-overlay {
   position: relative;
   z-index: 1;
-  padding: 1rem;
+  padding: 1.5em;
   color: white;
   /* text-align: center; */
 }
