@@ -1,183 +1,747 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SANZIDA AKTER | Full-Stack Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Full-Stack Developer & E-commerce PM specializing in React, JavaScript, and data-driven design. Transformed 1000+ product listings into scalable front-end mastery."
+    />
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400" rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-    </head>
+    <link rel="stylesheet" href="style.css" />
 
-    <body>
-        <div class="wrapper">
-            <div class="card">
-                <video autoplay muted loop playsinline class="bg-video">
-                    <source src="videos/sphere.mp4" type="video/mp4" />
-                </video>
+    <!-- Schema.org Person markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "SANZIDA AKTER",
+        "jobTitle": "Full-Stack Developer | E-commerce Product Manager",
+        "url": "https://sanzidamim.me",
+        "sameAs": [
+          "https://github.com/sanzida-mim",
+          "https://linkedin.com/in/sanzida-akter-b7b583233"
+        ],
+        "email": "mim53711@gmail.com",
+        "telephone": "+8801861585218",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paltan",
+          "addressRegion": "Dhaka",
+          "addressCountry": "Bangladesh"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Institute of Science Technology, Dhaka"
+        }
+      }
+    </script>
 
-                <div class="card-overlay">
-                    <section class="nav-bar" id="nav-bar">
-                        <div class="logo">>/_</div>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-                        <nav class="btns">
-                            <button class="btn" onclick="scrollToSection('education')">Education</button>
-                            <button class="btn" onclick="scrollToSection('experience')">Experience</button>
-                            <button class="btn" onclick="scrollToSection('projects')">Projects</button>
-                            <button class="btn" onclick="scrollToSection('contact_me')">Contact Me</button>
-                        </nav>
-                    </section>
-            
-                    <section id="about_me">
-                        <h1>Hey, there!</h1>
-                        <h2>Welcome To My Portfolio!</h2>
-                        <h3>I'm Sanzida Akter, a diverse professional and web developere enthusiast.</h3>
-                        <p>This is my first deployed website and also my web developer portfolio. Stay tuned for some cool upcoming projecs!</p>
-                    </section>
-                </div>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>"
+    />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-text">
+        <span class="glitch-text" data-text="SANZIDA">SANZIDA</span>
+        <span class="glitch-text" data-text="AKTER">AKTER</span>
+      </div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="cursor-trail"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">
+          <span class="logo-text">S</span><span class="logo-text">A</span>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a href="#projects" class="nav-link">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a href="#experience" class="nav-link">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="particles-container"></div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="typing-text">Hi, I'm</span>
+            <span class="name glitch-text" data-text="SANZIDA AKTER"
+              >SANZIDA AKTER</span
+            >
+            <span class="cursor">|</span>
+          </h1>
+
+          <h2 class="hero-subtitle">
+            <span class="typing-subtitle"
+              >Full-Stack Developer | E-commerce PM → Tech Innovator</span
+            >
+            <span class="cursor-subtitle">|</span>
+          </h2>
+
+          <p class="hero-tagline">
+            "Crafting responsive web apps with React, JavaScript, and
+            data-driven design. Transformed 1000+ product listings into scalable
+            front-end mastery."
+          </p>
+
+          <div class="hero-contact">
+            <div class="contact-info">
+              <a href="tel:+8801861585218" class="contact-link">
+                <span class="contact-icon">📱</span> +880 1861-585218
+              </a>
+              <a href="mailto:mim53711@gmail.com" class="contact-link">
+                <span class="contact-icon">✉️</span> mim53711@gmail.com
+              </a>
             </div>
-            
-            <div class="card">
-                <video autoplay muted loop playsinline class="bg-video">
-                    <source src="videos/stage-line.mp4" type="video/mp4" />
-                </video>
 
-                <div class="card-overlay">
-                    <section class="section" id="education">
-                        <div>
-                            <blockquote cite="https://www.positivityblog.com/quotes-on-education/">“The difference between school and life? In school, you're taught a lesson and then given a test. In life, you're given a test that teaches you a lesson.”<cite> — Tom Bodett</cite>
-                            </blockquote>
-                        </div>
-                        
-                        <div>
-                            <ul>
-                                <li>BSC</li>
-                                    <ul>
-                                        <li>Institute of Science & Technology</li>
-                                        <li>Major: Electronics & Communication Engineering (ECE)</li>
-                                        <li>Session: 2021-2022;</li>
-                                    </ul>
-                                <li>HSC</li>
-                                    <ul>
-                                        <li>Central Women's College</li>
-                                        <li>Department: Science</li>
-                                        <li>Passing Year: 2021</li>
-                                        <li>GPA: 4.22</li>
-                                    </ul>
-                                <li>SSC</li>
-                                    <ul>
-                                        <li>Motijheel Model High School & College</li>
-                                        <li>Department: Science</li>
-                                        <li>Passing Year: 2019</li>
-                                        <li>GPA: 4.33</li>
-                                    </ul>
-                            </ul>
-                        </div>
-
-                    </section>
-                </div>
+            <div class="hero-location">
+              <span class="location-icon">📍</span> Paltan, Dhaka, Bangladesh
             </div>
-            
-            <div class="card">
-                <video autoplay muted loop playsinline class="bg-video">
-                    <source src="videos/core.mp4" type="video/mp4" />
-                </video>
+          </div>
 
-                <div class="card-overlay">
-                    <section class="section" id="experience">
-                        <div>
-                            <div>
-                                <blockquote cite="https://www.positivityblog.com/quotes-on-education/">“Experience is not what happens to you; it is what you do with what happens to you.”<cite> — Aldous Huxley</cite>
-                                </blockquote>
-                            </div>
-                            
-                            <ul>
-                                <li>E-Commerce Project Manager</li>
-                                    <ul>
-                                        <li>3ingenious &#183; Part-time</li>
-                                        <li>November 2022 - Present</li>
-                                        <li>United States &#183; Remote</li>
-                                    </ul>
-                                <li>Content Writer</li>
-                                    <ul>
-                                        <li>Ghostwriter &#183; Project-based</li>
-                                        <li>January 2024 - Present</li>
-                                        <li>Remote</li>
-                                    </ul>
-                                <li>LLM Evaluation Specialist</li>
-                                    <ul>
-                                        <li>Innodata Inc. &#183; Project-based</li>
-                                        <li>June 2025 - Present</li>
-                                        <li>Remote</li>
-                                    </ul>
-                                <li>Data Analyst</li>
-                                    <ul>
-                                        <li>Remote Job Bd &#183; Internship</li>
-                                        <li>November 2023 - February 2024</li>
-                                        <li>Bangladesh &#183; Remote</li>
-                                    </ul>
-                                <li>Assistant Mentor</li>
-                                    <ul>
-                                        <li>Technovation &#183; Seasonal</li>
-                                        <li>2021 &#38; 2022</li>
-                                        <li>Bangladesh &#183; Remote</li>
-                                    </ul>
-                            </ul>
-                        </div>
-                    </section>
-                </div>
-            </div>
-    
-            <div class="card">
-                <video autoplay muted loop playsinline class="bg-video">
-                    <source src="videos/earth.mp4" type="video/mp4" />
-                </video>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
 
-                <div class="card-overlay">
-                    <section class="section" id="projects">
-                        <h3>Project Lists!</h3>
-                        <ul>
-                            <li>
-                                <a class="project" id="prj-1" href="https://sanzida-mim.github.io/to-do-list/" target="main">To-Do List</a>
-                            </li class="project">
-                            <li>
-                                <a class="project" id="prj-2" href="https://sanzida-mim.github.io/weather-app/" target="main">Weather App</a>
-                            </li>
-                    </section>
-                </div>
-            </div>
+          <div class="hero-social">
+            <a
+              href="https://linkedin.com/in/sanzida-akter-b7b583233"
+              target="_blank"
+              class="social-link"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/sanzida-mim"
+              target="_blank"
+              class="social-link"
+              >GitHub</a
+            >
+            <a href="https://sanzidamim.me" target="_blank" class="social-link"
+              >Personal Site</a
+            >
+          </div>
         </div>
 
-        <footer>
-            <section class="section" id="contact_me">
-                <p>Let's Contact!</p>
-                <p style="font-size: 20px;">E-mail: smim7312@gmail.com</p>
-
-                <div class="contact-icon">
-                    <a href="https://github.com/sanzida-mim" target="_blank">
-                        <img src="/icons/github.png" alt="GitHub" height="80" />
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/sanzida-akter-b7b583233/" target="_blank">
-                        <img src="icons/linkedin.png" alt="Linkedin" height="80" />
-                    </a>
-
-                    <a href="https://www.behance.net/gallery/188943283/Portfolio" target="main">
-                        <img src="icons/behance.png" alt="Behance" height="80">
-                    </a>
-
-                    <a href="" target="_blank">
-                        <img src="icons/discord.png" alt="Discord" height="80">
-                    </a>
-                </div>
-
-                <p style="font-size:15px">©SAM,2025</p>
-            </section>
-
-            <div class="home">
-                <button class="go-up-btn" onclick="scrollToSection('nav-bar')">Back To Top <span>&#10095;</span></button>
+        <div class="hero-image">
+          <div class="image-container">
+            <div class="image-frame">
+              <div class="image-placeholder"></div>
+              <div class="image-glow"></div>
+              <div class="image-spotlight"></div>
             </div>
-        </footer>
-        <script src="/scripts.js"></script>
-    </body>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-bio">
+            Results-driven professional with 2+ years as E-commerce Product
+            Manager (HeredomUS/3ingenious), optimizing 1000+ listings on
+            Shopify/Amazon/Walmart/eBay—boosted conversions 15%, SEO visibility
+            40%. Now mastering Web Development with React/JS projects. B.Sc.
+            Electronics & Communication Engineering (3rd year, Institute of
+            Science Technology, Dhaka). Agile/Scrum Certified. Languages:
+            English C1, Bengali Native, French Reading. Typing: 65 WPM.
+          </p>
+
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Experience:</span>
+              <span class="detail-value">2+ Years</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Projects:</span>
+              <span class="detail-value">1000+ Listings</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Conversion Boost:</span>
+              <span class="detail-value">15%</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">SEO Uplift:</span>
+              <span class="detail-value">40%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <div class="about-card">
+            <div class="card-content">
+              <h3 class="card-title">Tech Stack</h3>
+              <div class="tech-icons">
+                <div class="tech-icon">⚛️</div>
+                <div class="tech-icon">🚀</div>
+                <div class="tech-icon">📱</div>
+                <div class="tech-icon">🛒</div>
+                <div class="tech-icon">🔍</div>
+                <div class="tech-icon">⚡</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+      <div class="section-header">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3 class="category-title">Frontend & Core</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">HTML/CSS/JS</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">React</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="85"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Responsive Design</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="92"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">Tools & Platforms</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Git</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="88"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Shopify/CMS</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="95"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="category-title">Business & Analytics</h3>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">SEO/Data Analysis</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="97"></div>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-info">
+              <span class="skill-name">Agile/Scrum</span>
+              <span class="skill-percent">0%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" data-width="90"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon">🎬</div>
+              <h3 class="project-title">React Movie App</h3>
+              <p class="project-tech">
+                React, TMDB API, Search/Favorites, Responsive
+              </p>
+              <div class="project-hover">View Details →</div>
+            </div>
+            <div class="project-back">
+              <h3 class="project-title">React Movie App</h3>
+              <p class="project-desc">
+                Interactive movie discovery application with search, favorites,
+                and detailed information using TMDB API.
+              </p>
+              <a
+                href="https://sanzida-mim.github.io/react_movie_app/"
+                target="_blank"
+                class="project-link"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon">⛅</div>
+              <h3 class="project-title">Weather Dashboard</h3>
+              <p class="project-tech">
+                JS, Weather API, Real-time, Location-based
+              </p>
+              <div class="project-hover">View Details →</div>
+            </div>
+            <div class="project-back">
+              <h3 class="project-title">Weather Dashboard</h3>
+              <p class="project-desc">
+                Real-time weather application with location detection,
+                forecasts, and interactive maps.
+              </p>
+              <a
+                href="https://sanzida-mim.github.io/weather-app/"
+                target="_blank"
+                class="project-link"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon">✅</div>
+              <h3 class="project-title">Advanced To-Do List</h3>
+              <p class="project-tech">JS, LocalStorage, Drag & Drop</p>
+              <div class="project-hover">View Details →</div>
+            </div>
+            <div class="project-back">
+              <h3 class="project-title">Advanced To-Do List</h3>
+              <p class="project-desc">
+                Feature-rich task management with drag & drop, categories, and
+                persistent storage.
+              </p>
+              <a
+                href="https://sanzida-mim.github.io/to-do-list/"
+                target="_blank"
+                class="project-link"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon">⚔️</div>
+              <h3 class="project-title">Role Playing Game</h3>
+              <p class="project-tech">Vanilla JS, Combat System, Animations</p>
+              <div class="project-hover">View Details →</div>
+            </div>
+            <div class="project-back">
+              <h3 class="project-title">Role Playing Game</h3>
+              <p class="project-desc">
+                Interactive RPG with combat mechanics, inventory system, and
+                character progression.
+              </p>
+              <a
+                href="https://sanzida-mim.github.io/role_playing_game/"
+                target="_blank"
+                class="project-link"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon">❌⭕</div>
+              <h3 class="project-title">Tic Tac Toe AI</h3>
+              <p class="project-tech">JS, Unbeatable AI, Responsive</p>
+              <div class="project-hover">View Details →</div>
+            </div>
+            <div class="project-back">
+              <h3 class="project-title">Tic Tac Toe AI</h3>
+              <p class="project-desc">
+                Unbeatable AI opponent using minimax algorithm with multiple
+                difficulty levels.
+              </p>
+              <a
+                href="https://sanzida-mim.github.io/tic_tac_toe/"
+                target="_blank"
+                class="project-link"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card">
+          <div class="project-inner">
+            <div class="project-front">
+              <div class="project-icon">💱</div>
+              <h3 class="project-title">Currency Converter</h3>
+              <p class="project-tech">JS, Exchange API, Live Rates</p>
+              <div class="project-hover">View Details →</div>
+            </div>
+            <div class="project-back">
+              <h3 class="project-title">Currency Converter</h3>
+              <p class="project-desc">
+                Real-time currency conversion with historical data and offline
+                functionality.
+              </p>
+              <a
+                href="https://sanzida-mim.github.io/currency_converter/"
+                target="_blank"
+                class="project-link"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="additional-projects">
+        <h3 class="additional-title">More GitHub Repos</h3>
+        <div class="repo-links">
+          <a
+            href="https://github.com/sanzida-mim/text_to_speech"
+            target="_blank"
+            class="repo-link"
+            >Text-to-Speech</a
+          >
+          <a
+            href="https://github.com/sanzida-mim/roman_numeral_converter"
+            target="_blank"
+            class="repo-link"
+            >Roman Numeral Converter</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="experience">
+      <div class="section-header">
+        <h2 class="section-title">Experience & Education</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-date">Nov 2022–Present</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">E-commerce Product Manager</h3>
+            <h4 class="timeline-subtitle">HeredomUS / 3ingenious</h4>
+            <p class="timeline-desc">
+              Managed 1000+ listings across Shopify/Amazon/Walmart/eBay,
+              achieving 15% conversion increase, 98% Buy Box ownership, and 40%
+              SEO visibility uplift.
+            </p>
+          </div>
+          <div class="timeline-icon">🛒</div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-date">July 2025–</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">LLM AI Trainer</h3>
+            <h4 class="timeline-subtitle">Innodata</h4>
+            <p class="timeline-desc">
+              Evaluated 1000+ AI outputs with 99% accuracy rating, improving
+              model performance and reliability.
+            </p>
+          </div>
+          <div class="timeline-icon">🤖</div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-date">Jan 2024–Jul 2025</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Content Writer</h3>
+            <h4 class="timeline-subtitle">Freelanty</h4>
+            <p class="timeline-desc">
+              Authored 80+ SEO-optimized articles resulting in 45% organic
+              traffic growth for clients.
+            </p>
+          </div>
+          <div class="timeline-icon">✍️</div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-date">2022-2023</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Co-Mentor</h3>
+            <h4 class="timeline-subtitle">Technovation Girls</h4>
+            <p class="timeline-desc">
+              Guided young women through tech project development, fostering
+              STEM interest and skills.
+            </p>
+          </div>
+          <div class="timeline-icon">👩‍🏫</div>
+        </div>
+
+        <!-- Timeline Item 5 (Education) -->
+        <div class="timeline-item education">
+          <div class="timeline-date">Ongoing</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">
+              B.Sc. Electronics & Communication Engineering
+            </h3>
+            <h4 class="timeline-subtitle">
+              Institute of Science Technology, Dhaka (3rd Year)
+            </h4>
+            <p class="timeline-desc">
+              Currently pursuing degree with focus on digital systems and
+              communication technologies.
+            </p>
+          </div>
+          <div class="timeline-icon">🎓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="section-header">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3 class="contact-heading">Let's Build Something Amazing</h3>
+          <p class="contact-text">
+            I'm always open to discussing web development projects, creative
+            ideas, or opportunities to be part of your vision.
+          </p>
+
+          <div class="contact-details">
+            <a href="tel:+8801861585218" class="contact-detail">
+              <span class="detail-icon">📞</span>
+              <span class="detail-text">+880 1861-585218</span>
+            </a>
+            <a href="mailto:mim53711@gmail.com" class="contact-detail">
+              <span class="detail-icon">📧</span>
+              <span class="detail-text">mim53711@gmail.com</span>
+            </a>
+            <div class="contact-detail">
+              <span class="detail-icon">📍</span>
+              <span class="detail-text">Paltan, Dhaka, Bangladesh</span>
+            </div>
+          </div>
+
+          <div class="contact-social">
+            <a
+              href="https://linkedin.com/in/sanzida-akter-b7b583233"
+              target="_blank"
+              class="social-btn"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/sanzida-mim"
+              target="_blank"
+              class="social-btn"
+              >GitHub</a
+            >
+            <a href="https://sanzidamim.me" target="_blank" class="social-btn"
+              >Website</a
+            >
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                id="subject"
+                placeholder="Subject"
+                class="form-input"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                class="form-textarea"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <span class="submit-text">Send Message</span>
+              <div class="ripple"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>SANZIDA AKTER</span>
+        </div>
+        <p class="footer-tagline">
+          Crafting digital experiences with cutting-edge technology
+        </p>
+
+        <div class="footer-links">
+          <a href="#home" class="footer-link">Home</a>
+          <a href="#about" class="footer-link">About</a>
+          <a href="#skills" class="footer-link">Skills</a>
+          <a href="#projects" class="footer-link">Projects</a>
+          <a href="#experience" class="footer-link">Experience</a>
+          <a href="#contact" class="footer-link">Contact</a>
+        </div>
+
+        <div class="footer-social">
+          <a
+            href="https://linkedin.com/in/sanzida-akter-b7b583233"
+            target="_blank"
+            class="footer-social-link"
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/sanzida-mim"
+            target="_blank"
+            class="footer-social-link"
+            >GitHub</a
+          >
+          <a href="mailto:mim53711@gmail.com" class="footer-social-link"
+            >Email</a
+          >
+        </div>
+
+        <div class="footer-copyright">
+          &copy; <span id="currentYear"></span> SANZIDA AKTER. All rights
+          reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+  </body>
 </html>
