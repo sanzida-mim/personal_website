@@ -1,88 +1,109 @@
+<!-- Good version with cards but incomplete education experience projects, logo old, back to top button,-->
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SANZIDA AKTER | Front-End Developer Portfolio</title>
     <meta
       name="description"
-      content="Front-End Developer & E-commerce PM specializing in React, JavaScript, and data-driven design. Transformed 1000+ product listings into scalable front-end mastery."
+      content="Sanzida Akter - Frontend Developer & E-commerce PM. Crafting responsive web apps with React, JavaScript, and data-driven design. Portfolio showcasing innovative projects and technical expertise."
+    />
+    <meta
+      name="keywords"
+      content="Sanzida Akter, Frontend Developer, React Developer, JavaScript, Web Development, E-commerce, Product Manager, Portfolio"
+    />
+    <meta name="author" content="Sanzida Akter" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sanzidamim.me/" />
+    <meta
+      property="og:title"
+      content="Sanzida Akter - Frontend Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Crafting responsive web apps with React, JavaScript, and data-driven design."
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="Sanzida Akter - Frontend Developer Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Crafting responsive web apps with React, JavaScript, and data-driven design."
+    />
 
-    <!-- Schema.org Person markup -->
+    <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "SANZIDA AKTER",
-        "jobTitle": "Front-End Developer | E-commerce Product Manager",
+        "name": "Sanzida Akter",
         "url": "https://sanzidamim.me",
-        "sameAs": [
-          "https://github.com/sanzida-mim",
-          "https://linkedin.com/in/sanzida-akter-b7b583233"
-        ],
+        "jobTitle": "Frontend Developer",
         "email": "mim53711@gmail.com",
-        "telephone": "+8801861585218",
+        "telephone": "+880-1861-585218",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Dhaka",
-          "addressRegion": "Dhaka",
           "addressCountry": "Bangladesh"
         },
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Institute of Science Technology, Dhaka"
-        }
+        "sameAs": [
+          "https://www.linkedin.com/in/sanzida-akter-b7b583233/",
+          "https://github.com/sanzida-mim"
+        ]
       }
     </script>
+
+    <title>Sanzida Akter | Frontend Developer & Tech Innovator</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👩‍💻</text></svg>"
-    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
     <!-- Loading Screen -->
     <div class="loading-screen">
-      <div class="loading-text">
-        <span class="glitch-text" data-text="SANZIDA">SANZIDA</span>
-        <span class="glitch-text" data-text="AKTER">AKTER</span>
+      <div class="glitch-container">
+        <div class="glitch-text" data-text="SANZIDA AKTER">SANZIDA AKTER</div>
       </div>
       <div class="loading-bar">
         <div class="loading-progress"></div>
       </div>
     </div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <div class="cursor-trail"></div>
+    <!-- Particle Background -->
+    <div id="particles-hero"></div>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <a href="#home" class="nav-logo">
-          <span class="logo-text">S</span><span class="logo-text">A</span>
+        <a href="#" class="nav-logo">
+          <span class="logo-text">&lt;SA /&gt;</span>
         </a>
 
-        <ul class="nav-menu">
+        <ul class="nav-menu" id="nav-menu">
           <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
           <li class="nav-item">
@@ -99,149 +120,614 @@
           </li>
         </ul>
 
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="particles-container"></div>
-
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1 class="hero-title">
-            <span class="typing-text">Hi, I'm</span>
-            <span class="name glitch-text" data-text="SANZIDA AKTER"
-              >SANZIDA AKTER</span
-            >
-            <span class="cursor">|</span>
+    <section id="home" class="hero-section">
+      <div class="hero-spotlight"></div>
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-greeting">
+            <span class="greeting-text">Hello, I'm</span>
+          </div>
+          <h1 class="hero-name">
+            <span class="name-text" id="typing-name"></span>
+            <span class="cursor-blink">|</span>
           </h1>
-
-          <h2 class="hero-subtitle">
-            <span class="typing-subtitle"
-              >Front-End Developer | E-commerce PM → Tech Entusiast</span
-            >
-            <span class="cursor-subtitle">|</span>
-          </h2>
-
-          <p class="hero-tagline">
-            "Crafting responsive web apps with React, JavaScript, and
-            data-driven design. Transformed 1000+ product listings into scalable
-            front-end mastery."
+          <p class="hero-title" id="typing-title">
+            Front-End Developer | E-commerce PM → Tech Innovator
           </p>
-
-          <div class="hero-contact">
-            <div class="contact-info">
-              <a href="tel:+8801861585218" class="contact-link">
-                <span class="contact-icon">📱</span> +880 1861-585218
-              </a>
-              <a href="mailto:mim53711@gmail.com" class="contact-link">
-                <span class="contact-icon">✉️</span> mim53711@gmail.com
-              </a>
-            </div>
-
-            <div class="hero-location">
-              <span class="location-icon">📍</span> Dhaka, Bangladesh
-            </div>
+          <p class="hero-tagline">
+            Crafting
+            <span class="highlight-cyan">responsive web experiences</span> with
+            <span class="highlight-purple">React</span> and
+            <span class="highlight-blue">modern JavaScript</span>. Transformed
+            <span class="highlight-pink">1000+ product listings</span> into
+            pixel-perfect,
+            <span class="highlight-cyan">user-centric interfaces</span>.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
           </div>
-
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Contact Me</a>
-          </div>
-
           <div class="hero-social">
-            <a
-              href="https://linkedin.com/in/sanzida-akter-b7b583233"
-              target="_blank"
-              class="social-link"
-              >LinkedIn</a
-            >
             <a
               href="https://github.com/sanzida-mim"
               target="_blank"
+              rel="noopener noreferrer"
               class="social-link"
-              >GitHub</a
+              aria-label="GitHub"
             >
-            <a href="https://sanzidamim.me" target="_blank" class="social-link"
-              >Personal Site</a
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sanzida-akter-b7b583233/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="LinkedIn"
             >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a
+              href="/cdn-cgi/l/email-protection#84e9ede9b1b7b3b5b5c4e3e9e5ede8aae7ebe9"
+              class="social-link"
+              aria-label="Email"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Tech Stack Badges -->
+          <div class="hero-tech-stack">
+            <span class="tech-badge" data-tooltip="React">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <ellipse cx="12" cy="12" rx="10" ry="4"></ellipse>
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="10"
+                  ry="4"
+                  transform="rotate(60 12 12)"
+                ></ellipse>
+                <ellipse
+                  cx="12"
+                  cy="12"
+                  rx="10"
+                  ry="4"
+                  transform="rotate(120 12 12)"
+                ></ellipse>
+              </svg>
+            </span>
+            <span class="tech-badge" data-tooltip="JavaScript">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.611 2.656.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"
+                />
+              </svg>
+            </span>
+            <span class="tech-badge" data-tooltip="HTML5">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
+                />
+              </svg>
+            </span>
+            <span class="tech-badge" data-tooltip="CSS3">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm4.09 4.41l.175 1.937h10.073l-.282 2.715H8.205l.175 1.937h6.911l-.495 5.514-2.796.77-2.812-.77-.19-2.125H6.615l.329 3.686 5.034 1.397 5.058-1.397.674-7.553H5.59l-.175-1.937h10.46l.175-1.937H5.59z"
+                />
+              </svg>
+            </span>
+            <span class="tech-badge" data-tooltip="Git">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"
+                ></path>
+              </svg>
+            </span>
+            <span class="tech-badge" data-tooltip="Responsive Design">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </span>
           </div>
         </div>
-
         <div class="hero-image">
-          <div class="image-container">
-            <div class="image-frame">
-              <div class="image-placeholder"></div>
-              <div class="image-glow"></div>
-              <div class="image-spotlight"></div>
-            </div>
+          <div class="image-container" id="hero-photo">
+            <div class="image-glow"></div>
+            <img
+              src="assets/images/profile.jpg"
+              alt="Sanzida Akter - Frontend Developer"
+              class="profile-img"
+              loading="lazy"
+            />
+            <div class="image-frame"></div>
           </div>
         </div>
       </div>
-
       <div class="scroll-indicator">
-        <div class="mouse">
-          <div class="wheel"></div>
+        <div class="scroll-mouse">
+          <div class="scroll-wheel"></div>
         </div>
-        <span>Scroll</span>
       </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-      <div class="section-header">
-        <h2 class="section-title">About Me</h2>
-        <div class="section-line"></div>
-      </div>
+    <section id="about" class="about-section section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="title-number">01.</span> About Me
+        </h2>
+        <div class="about-grid">
+          <!-- Main Bio Card -->
+          <div class="about-bio-card" data-aos="fade-right">
+            <div class="bio-icon">
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <h3 class="bio-title">
+              Front-End Developer & E-commerce Specialist
+            </h3>
+            <p class="bio-description">
+              Results-driven E-commerce Product Manager with
+              <span class="highlight-cyan">3+ years</span> of experience at
+              HeredomUS and 3ingenious, where I optimized
+              <span class="highlight-pink"
+                >1,000+ Shopify and Amazon listings</span
+              >, achieving a
+              <span class="highlight-blue">15% conversion boost</span> and
+              <span class="highlight-purple">40% SEO uplift</span>.
+            </p>
+            <p class="bio-description">
+              Transitioning to
+              <span class="highlight-cyan">Web Development</span> with proven
+              HTML, CSS, and JavaScript proficiency. Multiple
+              <span class="highlight-pink">React projects live</span>, combining
+              analytical thinking with creative problem-solving. Currently
+              pursuing
+              <span class="highlight-blue"
+                >B.Sc. Electronics & Communication Engineering</span
+              >
+              (3rd year) at Institute of Science Technology, Dhaka.
+              <span class="highlight-purple">Agile Certified</span> professional
+              passionate about crafting user-centric digital experiences.
+            </p>
+            <div class="bio-highlight">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Agile/Scrum Certified Professional</span>
+            </div>
+          </div>
 
-      <div class="about-content">
-        <div class="about-text">
-          <p class="about-bio">
-            Results-driven professional with 3+ years as E-commerce Product
-            Manager (HeredomUS/3ingenious), optimizing 1000+ listings on
-            Shopify/Amazon/Walmart/eBay—boosted conversions 15%, SEO visibility
-            40%. Now mastering Web Development with React/JS projects. B.Sc.
-            Electronics & Communication Engineering (3rd year, Institute of
-            Science Technology, Dhaka). Agile/Scrum Certified. Languages:
-            English C1, Bengali Native, French Reading. Typing: 65 WPM.
-          </p>
+          <!-- Quick Stats Grid -->
+          <div class="about-quick-stats" data-aos="fade-left">
+            <div class="quick-stat-item">
+              <div class="stat-icon cyan">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number" data-count="8">0</div>
+                <div class="stat-label">Projects Deployed</div>
+              </div>
+            </div>
 
-          <div class="about-details">
-            <div class="detail-item">
-              <span class="detail-label">Experience:</span>
-              <span class="detail-value">3+ Years</span>
+            <div class="quick-stat-item">
+              <div class="stat-icon purple">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number" data-count="1000">0</div>
+                <div class="stat-label">Products Optimized</div>
+              </div>
             </div>
-            <div class="detail-item">
-              <span class="detail-label">Projects:</span>
-              <span class="detail-value">1000+ Listings</span>
+
+            <div class="quick-stat-item">
+              <div class="stat-icon pink">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path
+                    d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  ></path>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">% Conversion Boost</div>
+              </div>
             </div>
-            <div class="detail-item">
-              <span class="detail-label">Conversion Boost:</span>
-              <span class="detail-value">15%</span>
-            </div>
-            <div class="detail-item">
-              <span class="detail-label">SEO Uplift:</span>
-              <span class="detail-value">40%</span>
+
+            <div class="quick-stat-item">
+              <div class="stat-icon blue">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-number" data-count="65">0</div>
+                <div class="stat-label">WPM Typing Speed</div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="about-image">
-          <div class="about-card">
+        <!-- Skills Progress Bars -->
+        <div class="skills-progress-section" data-aos="fade-up">
+          <h3 class="skills-progress-title">Technical Proficiency</h3>
+          <div class="skills-progress-grid">
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">HTML/CSS/JavaScript</span>
+                <span class="skill-progress-percent" data-percent="85">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="85"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">React</span>
+                <span class="skill-progress-percent" data-percent="80">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="80"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">Responsive Design</span>
+                <span class="skill-progress-percent" data-percent="90">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="90"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">Git/Version Control</span>
+                <span class="skill-progress-percent" data-percent="85">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="85"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">SEO/Data Analysis</span>
+                <span class="skill-progress-percent" data-percent="97">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="97"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">Shopify/CMS</span>
+                <span class="skill-progress-percent" data-percent="95">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="95"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name">Agile/Scrum</span>
+                <span class="skill-progress-percent" data-percent="90">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="90"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <div class="skill-progress-item">
+              <div class="skill-progress-header">
+                <span class="skill-progress-name"
+                  >Content Writing/Copywriting</span
+                >
+                <span class="skill-progress-percent" data-percent="92">0%</span>
+              </div>
+              <div class="skill-progress-bar">
+                <div
+                  class="skill-progress-fill"
+                  data-width="92"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education & Expertise Cards -->
+        <div class="about-cards-grid">
+          <!-- Education Card -->
+          <div
+            class="info-card education-card"
+            data-aos="zoom-in"
+            data-aos-delay="100"
+          >
+            <div class="card-icon-header">
+              <div class="card-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Education</h3>
+            </div>
             <div class="card-content">
-              <h3 class="card-title">Tech Stack</h3>
-              <div class="tech-icons">
-                <div class="tech-icon">⚛️</div>
-                <div class="tech-icon">🚀</div>
-                <div class="tech-icon">📱</div>
-                <div class="tech-icon">🛒</div>
-                <div class="tech-icon">🔍</div>
-                <div class="tech-icon">⚡</div>
+              <div class="edu-item">
+                <div class="edu-degree">
+                  B.Sc. Electronics & Communication Engineering
+                </div>
+                <div class="edu-school">
+                  Institute of Science Technology, Dhaka
+                </div>
+                <div class="edu-status">
+                  <span class="status-badge">3rd Year - In Progress</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Languages Card -->
+          <div
+            class="info-card languages-card"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
+            <div class="card-icon-header">
+              <div class="card-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Languages</h3>
+            </div>
+            <div class="card-content">
+              <div class="language-item">
+                <span class="lang-name">English</span>
+                <span class="lang-level">C1 Professional</span>
+              </div>
+              <div class="language-item">
+                <span class="lang-name">Bengali</span>
+                <span class="lang-level">Native</span>
+              </div>
+              <div class="language-item">
+                <span class="lang-name">French</span>
+                <span class="lang-level">Reading</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location Card -->
+          <div
+            class="info-card location-card"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
+            <div class="card-icon-header">
+              <div class="card-icon">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                  ></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <h3 class="card-title">Location</h3>
+            </div>
+            <div class="card-content">
+              <div class="location-details">
+                <div class="location-main">Paltan, Dhaka</div>
+                <div class="location-country">Bangladesh</div>
+                <div class="location-badge">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  <span>Open to Remote Work</span>
+                </div>
               </div>
             </div>
           </div>
@@ -249,448 +735,1269 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <div class="section-header">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="section-line"></div>
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
+    </div>
 
-      <div class="skills-container">
-        <div class="skill-category">
-          <h3 class="category-title">Frontend & Core</h3>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">HTML/CSS/JS</span>
-              <span class="skill-percent">0%</span>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="title-number">02.</span> Skills & Expertise
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+            <div class="category-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
             </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="90"></div>
+            <h3 class="category-title">Frontend Development</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML/CSS/JavaScript</span>
+                <span class="skill-percent" data-percent="90">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React</span>
+                <span class="skill-percent" data-percent="85">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-percent" data-percent="92">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="92"></div>
+              </div>
             </div>
           </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">React</span>
-              <span class="skill-percent">0%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="85"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Responsive Design</span>
-              <span class="skill-percent">0%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="92"></div>
-            </div>
-          </div>
-        </div>
 
-        <div class="skill-category">
-          <h3 class="category-title">Tools & Platforms</h3>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Git</span>
-              <span class="skill-percent">0%</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+            <div class="category-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                  d="M12 1v6m0 6v6m5.2-11.2l-4.2 4.2m0 6l4.2 4.2M23 12h-6m-6 0H1m11.2 5.2l-4.2-4.2m0-6l-4.2-4.2"
+                ></path>
+              </svg>
             </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="88"></div>
+            <h3 class="category-title">Development Tools</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Git & Version Control</span>
+                <span class="skill-percent" data-percent="88">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Agile/Scrum</span>
+                <span class="skill-percent" data-percent="90">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
             </div>
           </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Shopify/CMS</span>
-              <span class="skill-percent">0%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="95"></div>
-            </div>
-          </div>
-        </div>
 
-        <div class="skill-category">
-          <h3 class="category-title">Business & Analytics</h3>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">SEO/Data Analysis</span>
-              <span class="skill-percent">0%</span>
+          <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+            <div class="category-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
             </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="97"></div>
+            <h3 class="category-title">E-commerce & Analytics</h3>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Shopify/CMS Platforms</span>
+                <span class="skill-percent" data-percent="95">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
             </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-info">
-              <span class="skill-name">Agile/Scrum</span>
-              <span class="skill-percent">0%</span>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-progress" data-width="90"></div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">SEO & Data Analysis</span>
+                <span class="skill-percent" data-percent="97">0%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="97"></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="section-header">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="section-line"></div>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <div class="project-front">
-              <div class="project-icon">🎬</div>
-              <h3 class="project-title">React Movie App</h3>
-              <p class="project-tech">
-                React, TMDB API, Search/Favorites, Responsive
-              </p>
-              <div class="project-hover">View Details →</div>
-            </div>
-            <div class="project-back">
-              <h3 class="project-title">React Movie App</h3>
-              <p class="project-desc">
-                Interactive movie discovery application with search, favorites,
-                and detailed information using TMDB API.
-              </p>
-              <a
-                href="https://sanzida-mim.github.io/react_movie_app/"
-                target="_blank"
-                class="project-link"
-                >Live Demo</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <div class="project-front">
-              <div class="project-icon">⛅</div>
-              <h3 class="project-title">Weather Dashboard</h3>
-              <p class="project-tech">
-                JS, Weather API, Real-time, Location-based
-              </p>
-              <div class="project-hover">View Details →</div>
-            </div>
-            <div class="project-back">
-              <h3 class="project-title">Weather Dashboard</h3>
-              <p class="project-desc">
-                Real-time weather application with location detection,
-                forecasts, and interactive maps.
-              </p>
-              <a
-                href="https://sanzida-mim.github.io/weather-app/"
-                target="_blank"
-                class="project-link"
-                >Live Demo</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <div class="project-front">
-              <div class="project-icon">✅</div>
-              <h3 class="project-title">Advanced To-Do List</h3>
-              <p class="project-tech">JS, LocalStorage, Drag & Drop</p>
-              <div class="project-hover">View Details →</div>
-            </div>
-            <div class="project-back">
-              <h3 class="project-title">Advanced To-Do List</h3>
-              <p class="project-desc">
-                Feature-rich task management with drag & drop, categories, and
-                persistent storage.
-              </p>
-              <a
-                href="https://sanzida-mim.github.io/to-do-list/"
-                target="_blank"
-                class="project-link"
-                >Live Demo</a
-              >
+    <section id="projects" class="projects-section section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="title-number">03.</span> Featured Projects
+        </h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/react_movie_app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/react_movie_app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">React Movie App</h3>
+                <p class="project-description">
+                  Full-featured movie discovery app using React and TMDB API
+                  with search functionality and favorites management.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TMDB API</span>
+                  <span class="tech-tag">Responsive</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <div class="project-front">
-              <div class="project-icon">⚔️</div>
-              <h3 class="project-title">Role Playing Game</h3>
-              <p class="project-tech">Vanilla JS, Combat System, Animations</p>
-              <div class="project-hover">View Details →</div>
-            </div>
-            <div class="project-back">
-              <h3 class="project-title">Role Playing Game</h3>
-              <p class="project-desc">
-                Interactive RPG with combat mechanics, inventory system, and
-                character progression.
-              </p>
-              <a
-                href="https://sanzida-mim.github.io/role_playing_game/"
-                target="_blank"
-                class="project-link"
-                >Live Demo</a
-              >
+          <!-- Project 2 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/weather-app"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/weather-app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Weather Dashboard</h3>
+                <p class="project-description">
+                  Real-time weather application with location-based forecasting
+                  and interactive weather data visualization.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Weather API</span>
+                  <span class="tech-tag">Geolocation</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <div class="project-front">
-              <div class="project-icon">❌⭕</div>
-              <h3 class="project-title">Tic Tac Toe AI</h3>
-              <p class="project-tech">JS, Unbeatable AI, Responsive</p>
-              <div class="project-hover">View Details →</div>
-            </div>
-            <div class="project-back">
-              <h3 class="project-title">Tic Tac Toe AI</h3>
-              <p class="project-desc">
-                Unbeatable AI opponent using minimax algorithm with multiple
-                difficulty levels.
-              </p>
-              <a
-                href="https://sanzida-mim.github.io/tic_tac_toe/"
-                target="_blank"
-                class="project-link"
-                >Live Demo</a
-              >
+          <!-- Project 3 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="300">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/to-do-list"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/to-do-list/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Advanced To-Do List</h3>
+                <p class="project-description">
+                  Feature-rich task management app with drag-and-drop
+                  functionality and local storage persistence.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">LocalStorage</span>
+                  <span class="tech-tag">Drag & Drop</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="project-inner">
-            <div class="project-front">
-              <div class="project-icon">💱</div>
-              <h3 class="project-title">Currency Converter</h3>
-              <p class="project-tech">JS, Exchange API, Live Rates</p>
-              <div class="project-hover">View Details →</div>
-            </div>
-            <div class="project-back">
-              <h3 class="project-title">Currency Converter</h3>
-              <p class="project-desc">
-                Real-time currency conversion with historical data and offline
-                functionality.
-              </p>
-              <a
-                href="https://sanzida-mim.github.io/currency_converter/"
-                target="_blank"
-                class="project-link"
-                >Live Demo</a
-              >
+          <!-- Project 4 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/role_playing_game"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/role_playing_game/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Role Playing Game</h3>
+                <p class="project-description">
+                  Interactive RPG with combat system, character progression, and
+                  smooth animations built with vanilla JavaScript.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Vanilla JS</span>
+                  <span class="tech-tag">Game Logic</span>
+                  <span class="tech-tag">Animations</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="additional-projects">
-        <h3 class="additional-title">More GitHub Repos</h3>
-        <div class="repo-links">
-          <a
-            href="https://github.com/sanzida-mim/text_to_speech"
-            target="_blank"
-            class="repo-link"
-            >Text-to-Speech</a
-          >
-          <a
-            href="https://github.com/sanzida-mim/roman_numeral_converter"
-            target="_blank"
-            class="repo-link"
-            >Roman Numeral Converter</a
-          >
+          <!-- Project 5 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/tic_tac_toe"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/tic_tac_toe/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Tic Tac Toe AI</h3>
+                <p class="project-description">
+                  Classic game with unbeatable AI using minimax algorithm,
+                  featuring responsive design and smooth gameplay.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">AI Algorithm</span>
+                  <span class="tech-tag">Responsive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Calorie Counter -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="300">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/calorie_counter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/calorie_counter/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Calorie Counter</h3>
+                <p class="project-description">
+                  Nutrition tracking application with data visualization for
+                  monitoring daily calorie intake and nutritional goals.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Data Visualization</span>
+                  <span class="tech-tag">LocalStorage</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7: Currency Converter -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/currency_converter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/currency_converter/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Currency Converter</h3>
+                <p class="project-description">
+                  Real-time currency conversion tool with live exchange rates
+                  and historical data for multiple currencies worldwide.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Exchange API</span>
+                  <span class="tech-tag">Live Data</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="100">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/text_to_speech"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/text_to_speech/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Text-to-Speech Converter</h3>
+                <p class="project-description">
+                  Browser-based text-to-speech application with multiple voice
+                  options and speech synthesis controls.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Web Speech API</span>
+                  <span class="tech-tag">Accessibility</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="project-card" data-aos="flip-up" data-aos-delay="200">
+            <div class="project-inner">
+              <div class="project-front">
+                <div class="project-header">
+                  <div class="project-folder">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="project-links">
+                    <a
+                      href="https://github.com/sanzida-mim/roman_numeral_converter"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://sanzida-mim.github.io/roman_numeral_converter/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Live Demo"
+                    >
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                        ></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="project-title">Roman Numeral Converter</h3>
+                <p class="project-description">
+                  Bidirectional converter between decimal and Roman numerals
+                  with validation and error handling.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Algorithm</span>
+                  <span class="tech-tag">Form Validation</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience & Education Section -->
-    <section id="experience" class="experience">
-      <div class="section-header">
-        <h2 class="section-title">Experience & Education</h2>
-        <div class="section-line"></div>
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
+    </div>
 
-      <div class="timeline">
-        <!-- Timeline Item 1 -->
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2022–Present</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">E-commerce Product Manager</h3>
-            <h4 class="timeline-subtitle">HeredomUS / 3ingenious</h4>
-            <p class="timeline-desc">
-              Managed 1000+ listings across Shopify/Amazon/Walmart/eBay,
-              achieving 15% conversion increase, 98% Buy Box ownership, and 40%
-              SEO visibility uplift.
-            </p>
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="title-number">04.</span> Professional Experience
+        </h2>
+        <div class="timeline">
+          <!-- Position 1: E-commerce Product Manager -->
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">November 2022 - Present</span>
+              <h3 class="timeline-title">E-commerce Product Manager</h3>
+              <h4 class="timeline-company">HeredomUS / 3ingenious | Remote</h4>
+              <p class="timeline-description">
+                Created and managed 1,000+ listings across Shopify, WordPress,
+                Amazon, Walmart, and eBay. Achieved 15% conversion increase via
+                data-driven pricing optimization, 98% Buy Box success rate, 40%
+                SEO uplift through metadata optimization, 95% overselling
+                reduction, and 25% seasonal sales growth via cross-functional
+                campaigns.
+              </p>
+              <ul class="timeline-highlights">
+                <li>
+                  Implemented data-driven pricing strategies achieving 15%
+                  conversion boost
+                </li>
+                <li>
+                  Optimized metadata and keywords for 40% increase in SEO
+                  visibility
+                </li>
+                <li>
+                  Coordinated cross-functional seasonal campaigns driving 25%
+                  sales growth
+                </li>
+                <li>
+                  Reduced inventory overselling by 95% through improved tracking
+                  systems
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="timeline-icon">🛒</div>
-        </div>
 
-        <!-- Timeline Item 2 -->
-        <div class="timeline-item">
-          <div class="timeline-date">July 2025–</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">LLM AI Trainer</h3>
-            <h4 class="timeline-subtitle">Innodata, Turing</h4>
-            <p class="timeline-desc">
-              Evaluated 1000+ AI outputs with 99% accuracy rating, improving
-              model performance and reliability.
-            </p>
+          <!-- Position 2: LLM AI Trainer - Turing -->
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">September - December 2025</span>
+              <h3 class="timeline-title">LLM AI Trainer</h3>
+              <h4 class="timeline-company">Turing | Remote</h4>
+              <p class="timeline-description">
+                Developed catalog management AI workflows including KYC
+                validation, seller verification, and product enrichment.
+                Structured real-world scenarios for Gemini AI agents covering
+                lead generation and marketplace refunds. Broke complex workflows
+                into scalable datasets reflecting actual workplace scenarios for
+                enhanced model training.
+              </p>
+              <ul class="timeline-highlights">
+                <li>
+                  Designed AI workflows for e-commerce catalog management
+                  operations
+                </li>
+                <li>
+                  Created structured datasets for Gemini AI agent training
+                </li>
+                <li>
+                  Developed scalable real-world scenario frameworks for model
+                  improvement
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="timeline-icon">🤖</div>
-        </div>
 
-        <!-- Timeline Item 3 -->
-        <div class="timeline-item">
-          <div class="timeline-date">Jan 2024–Jul 2025</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Content Writer</h3>
-            <h4 class="timeline-subtitle">Freelanty</h4>
-            <p class="timeline-desc">
-              Authored 80+ SEO-optimized articles resulting in 45% organic
-              traffic growth for clients.
-            </p>
+          <!-- Position 3: LLM AI Trainer - Innodata -->
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">July - August 2025</span>
+              <h3 class="timeline-title">LLM AI Trainer</h3>
+              <h4 class="timeline-company">Innodata | Remote</h4>
+              <p class="timeline-description">
+                Evaluated 1,000+ AI outputs with 99% accuracy across multiple
+                quality dimensions. Refined prompts to reduce bias and enhance
+                contextual understanding. Annotated diverse datasets for model
+                training focusing on accuracy, clarity, tone, and compliance
+                standards.
+              </p>
+              <ul class="timeline-highlights">
+                <li>
+                  Maintained 99% accuracy rate in evaluating AI model outputs
+                </li>
+                <li>
+                  Enhanced prompt engineering to minimize bias in responses
+                </li>
+                <li>Annotated training datasets across 4 quality dimensions</li>
+              </ul>
+            </div>
           </div>
-          <div class="timeline-icon">✍️</div>
-        </div>
 
-        <!-- Timeline Item 4 -->
-        <div class="timeline-item">
-          <div class="timeline-date">2022-2023</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">Co-Mentor</h3>
-            <h4 class="timeline-subtitle">Technovation Girls</h4>
-            <p class="timeline-desc">
-              Guided young women through tech project development, fostering
-              STEM interest and skills.
-            </p>
+          <!-- Position 4: Content Writer -->
+          <div class="timeline-item" data-aos="fade-left">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">January 2024 - Present</span>
+              <h3 class="timeline-title">Content Writer</h3>
+              <h4 class="timeline-company">Freelance | Remote</h4>
+              <p class="timeline-description">
+                Produced 80+ SEO articles across CAD engineering, home
+                appliances, SAAS, and consumer electronics. Drove 45% client
+                traffic growth via keyword optimization and real-time data
+                visualization. Delivered technical, ghost, and copywriting while
+                maintaining brand voice and verified research accuracy.
+              </p>
+              <ul class="timeline-highlights">
+                <li>
+                  Achieved 45% traffic growth through strategic SEO
+                  implementation
+                </li>
+                <li>
+                  Specialized in technical writing across engineering and
+                  technology sectors
+                </li>
+                <li>
+                  Maintained brand consistency across multiple client portfolios
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="timeline-icon">👩‍🏫</div>
-        </div>
 
-        <!-- Timeline Item 5 (Education) -->
-        <div class="timeline-item education">
-          <div class="timeline-date">Ongoing</div>
-          <div class="timeline-content">
-            <h3 class="timeline-title">
+          <!-- Position 5: Co-Mentor -->
+          <div class="timeline-item" data-aos="fade-right">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">January 2022 - 2023</span>
+              <h3 class="timeline-title">Co-Mentor</h3>
+              <h4 class="timeline-company">
+                Technovation Girls Bangladesh | Remote
+              </h4>
+              <p class="timeline-description">
+                Guided teens in building sustainable tech solutions for
+                environmental challenges. Mentored app ideation, Scratch coding,
+                business model development, and international pitch preparation,
+                empowering the next generation of female tech innovators.
+              </p>
+              <ul class="timeline-highlights">
+                <li>
+                  Mentored coding fundamentals and app development using Scratch
+                </li>
+                <li>
+                  Guided business model creation for sustainable tech solutions
+                </li>
+                <li>
+                  Prepared teams for international competition presentations
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="education-section section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="title-number">05.</span> Education & Certifications
+        </h2>
+        <div class="education-grid">
+          <!-- Education Card 1 -->
+          <div class="edu-cert-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="edu-cert-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+              </svg>
+            </div>
+            <h3 class="edu-cert-title">
               B.Sc. Electronics & Communication Engineering
             </h3>
-            <h4 class="timeline-subtitle">
-              Institute of Science Technology, Dhaka (3rd Year)
-            </h4>
-            <p class="timeline-desc">
-              Currently pursuing degree with focus on digital systems and
-              communication technologies.
+            <p class="edu-cert-institution">
+              Institute of Science Technology, Dhaka
+            </p>
+            <p class="edu-cert-status">
+              <span class="status-badge active">3rd Year - In Progress</span>
+            </p>
+            <p class="edu-cert-description">
+              Studying advanced electronics, communication systems, and embedded
+              programming, building strong foundation in problem-solving and
+              technical analysis.
             </p>
           </div>
-          <div class="timeline-icon">🎓</div>
+
+          <!-- Certification Card 2 -->
+          <div class="edu-cert-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="edu-cert-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3 class="edu-cert-title">Agile Scrum Fundamentals Certified</h3>
+            <p class="edu-cert-institution">Professional Certification</p>
+            <p class="edu-cert-status">
+              <span class="status-badge certified">Certified</span>
+            </p>
+            <p class="edu-cert-description">
+              Proficient in Agile methodologies, sprint planning, and
+              collaborative team workflows for efficient project delivery.
+            </p>
+          </div>
+
+          <!-- Language Proficiency Card 3 -->
+          <div class="edu-cert-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="edu-cert-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="edu-cert-title">English Proficiency C1 CEFR</h3>
+            <p class="edu-cert-institution">Language Proficiency</p>
+            <p class="edu-cert-status">
+              <span class="status-badge proficient">Advanced</span>
+            </p>
+            <p class="edu-cert-description">
+              Advanced English proficiency with 65 WPM typing speed, enabling
+              clear communication and efficient content creation.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="section-header">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="section-line"></div>
+    <!-- Section Divider -->
+    <div class="section-divider">
+      <div class="divider-line"></div>
+      <div class="divider-dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
+    </div>
 
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3 class="contact-heading">Let's Build Something Amazing</h3>
-          <p class="contact-text">
-            I'm always open to discussing web development projects, creative
-            ideas, or opportunities to be part of your vision.
-          </p>
-
-          <div class="contact-details">
-            <a href="tel:+8801861585218" class="contact-detail">
-              <span class="detail-icon">📞</span>
-              <span class="detail-text">+880 1861-585218</span>
-            </a>
-            <a href="mailto:mim53711@gmail.com" class="contact-detail">
-              <span class="detail-icon">📧</span>
-              <span class="detail-text">mim53711@gmail.com</span>
-            </a>
-            <div class="contact-detail">
-              <span class="detail-icon">📍</span>
-              <span class="detail-text">Dhaka, Bangladesh</span>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          <span class="title-number">06.</span> Get In Touch
+        </h2>
+        <div class="contact-content">
+          <div class="contact-info" data-aos="fade-right">
+            <h3 class="contact-subtitle">Let's Create Something Amazing</h3>
+            <p class="contact-text">
+              I'm currently seeking new opportunities in web development and
+              open to exciting projects. Whether you have a question or just
+              want to say hi, I'll do my best to get back to you!
+            </p>
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-text-info">
+                  <span class="contact-label">Email</span>
+                  <a
+                    href="/cdn-cgi/l/email-protection#92fffbffa7a1a5a3a3d2f5fff3fbfebcf1fdff"
+                    class="contact-link"
+                    ><span
+                      class="__cf_email__"
+                      data-cfemail="573a3e3a626460666617303a363e3b7934383a"
+                      >[email&#160;protected]</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="contact-text-info">
+                  <span class="contact-label">Phone</span>
+                  <a href="tel:+8801861585218" class="contact-link"
+                    >+880 1861-585218</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+                    ></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-text-info">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Paltan, Dhaka, Bangladesh</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="contact-social">
-            <a
-              href="https://linkedin.com/in/sanzida-akter-b7b583233"
-              target="_blank"
-              class="social-btn"
-              >LinkedIn</a
-            >
-            <a
-              href="https://github.com/sanzida-mim"
-              target="_blank"
-              class="social-btn"
-              >GitHub</a
-            >
-            <a href="https://sanzidamim.me" target="_blank" class="social-btn"
-              >Website</a
-            >
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <form id="contactForm">
+          <form class="contact-form" data-aos="fade-left" id="contact-form">
             <div class="form-group">
               <input
                 type="text"
                 id="name"
-                placeholder="Your Name"
+                name="name"
                 class="form-input"
                 required
               />
+              <label for="name" class="form-label">Your Name</label>
             </div>
             <div class="form-group">
               <input
                 type="email"
                 id="email"
-                placeholder="Your Email"
+                name="email"
                 class="form-input"
                 required
               />
+              <label for="email" class="form-label">Your Email</label>
             </div>
             <div class="form-group">
               <input
                 type="text"
                 id="subject"
-                placeholder="Subject"
+                name="subject"
                 class="form-input"
                 required
               />
+              <label for="subject" class="form-label">Subject</label>
             </div>
             <div class="form-group">
               <textarea
                 id="message"
-                placeholder="Your Message"
-                class="form-textarea"
+                name="message"
                 rows="5"
+                class="form-input"
                 required
               ></textarea>
+              <label for="message" class="form-label">Message</label>
             </div>
-            <button type="submit" class="form-submit">
-              <span class="submit-text">Send Message</span>
-              <div class="ripple"></div>
+            <button type="submit" class="btn btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-ripple"></span>
             </button>
           </form>
         </div>
@@ -699,49 +2006,91 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-logo">
-          <span>SANZIDA AKTER</span>
-        </div>
-        <p class="footer-tagline">
-          Crafting digital experiences with cutting-edge technology
-        </p>
-
-        <div class="footer-links">
-          <a href="#home" class="footer-link">Home</a>
-          <a href="#about" class="footer-link">About</a>
-          <a href="#skills" class="footer-link">Skills</a>
-          <a href="#projects" class="footer-link">Projects</a>
-          <a href="#experience" class="footer-link">Experience</a>
-          <a href="#contact" class="footer-link">Contact</a>
-        </div>
-
-        <div class="footer-social">
-          <a
-            href="https://linkedin.com/in/sanzida-akter-b7b583233"
-            target="_blank"
-            class="footer-social-link"
-            >LinkedIn</a
-          >
-          <a
-            href="https://github.com/sanzida-mim"
-            target="_blank"
-            class="footer-social-link"
-            >GitHub</a
-          >
-          <a href="mailto:mim53711@gmail.com" class="footer-social-link"
-            >Email</a
-          >
-        </div>
-
-        <div class="footer-copyright">
-          &copy; <span id="currentYear"></span> SANZIDA AKTER. All rights
-          reserved.
+      <div class="container">
+        <div class="footer-content">
+          <p class="footer-text">
+            Designed & Built by
+            <span class="highlight-cyan">Sanzida Akter</span>
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://github.com/sanzida-mim"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sanzida-akter-b7b583233/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a
+              href="/cdn-cgi/l/email-protection#a2cfcbcf9791959393e2c5cfc3cbce8cc1cdcf"
+              aria-label="Email"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="main.js"></script>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
   </body>
 </html>
