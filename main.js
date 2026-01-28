@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typingSubtitle) {
       gsap.to(typingSubtitle, {
         duration: 2,
-        text: "Full-Stack Developer | E-commerce PM → Tech Innovator",
+        text: "Front-End Developer | E-commerce PM → Tech Enthusiast",
         delay: 1.5,
         ease: "none",
         onComplete: () => {
